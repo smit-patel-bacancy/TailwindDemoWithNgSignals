@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,9 +10,16 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
+  constructor(private router: Router) {
+
+  }
   onSubmit() {
-    console.log('Login clicked');
-    console.log('Email:', this.email);
-    console.log('Password:', this.password);
+    console.warn('Login clicked');
+    console.warn('Email:', this.email);
+    console.warn('Password:', this.password);
+
+    if (this.email == 'smit.patel@bacancy.com' && this.password == '123') {
+      this.router.navigateByUrl('/todo-list');
+    }
   }
 }
