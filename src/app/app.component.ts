@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NotificationServiceService } from 'src/services/notification-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TailwindDemoWithNgSignals';
+
+  constructor(public notificationService: NotificationServiceService) {
+
+  }
 }

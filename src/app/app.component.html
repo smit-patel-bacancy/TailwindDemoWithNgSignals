@@ -1,5 +1,18 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<div class="flex items-center ">
+  <h1 class="text-3xl font-bold underline">
+    Welcome to Demo of TodoList with help of Tailwind CSS & Angular Signals
+  </h1>
+</div>
+
+<hr class="mt-2">
+
+<div *ngIf="notificationService.isNotificationShow"
+  class="fixed top-4 right-4 bg-blue-500 text-white rounded-lg shadow-lg p-4 transition-transform transform duration-300"
+  id="notification">
+  <div class="flex items-center">
+    <p>{{notificationService.notificationMessage}}</p>
+    <button class="ml-5 text-white border-black" (click)="notificationService.closeNotification()">❌</button>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
