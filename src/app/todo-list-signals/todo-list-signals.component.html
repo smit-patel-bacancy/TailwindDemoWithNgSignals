@@ -10,8 +10,8 @@
         </button>
     </div>
     <ul>
-        <li *ngFor="let todo of todoList()" class="mb-2">
-            <input type="checkbox" [checked]="todo.completed" (change)="toggleTodo(todo.id)" class="mr-5" />
+        <li *ngFor="let todo of todoList()" class="mb-2 flex align-center border-black">
+            <input type="checkbox" [checked]="todo.completed" (change)="toggleTodo(todo.id)" class="mr-5 w-4 h-4" />
             <span [class.line-through]="todo.completed">{{ todo.text }}</span>
             <button (click)="removeTodo(todo.id)" class="ml-2 text-red-500">
                 Remove
